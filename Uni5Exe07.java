@@ -1,9 +1,10 @@
+/*Descreva um algoritmo que leia um número inteiro n e, dados n números reais informe o maior e o menor número. */
+
 import java.util.Scanner;
 
 public class Uni5Exe07 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        int soma = 0;
         System.out.print("Quantidade de números que deseja inserir: ");
         int n = teclado.nextInt();
         System.out.print("1° número: ");

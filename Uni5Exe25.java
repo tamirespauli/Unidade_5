@@ -15,24 +15,20 @@ public class Uni5Exe25 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-        int pontosD = 0; // Pontos do jogador da direita
-        int pontosE = 0; // Pontos do jogador da esquerda
+        int pontosD = 0; 
+        int pontosE = 0;
 
         while (true) {
-            // Lê o código do ponto
             System.out.print("Digite o código do ponto (D para o jogador da direita, E para o jogador da esquerda): ");
             char codigoPonto = teclado.next().charAt(0);
-
-            // Atualiza os pontos de acordo com o código
             if (codigoPonto == 'D' || codigoPonto == 'd') {
                 pontosD++;
             } else if (codigoPonto == 'E' || codigoPonto == 'e') {
                 pontosE++;
             } else {
                 System.out.println("Código inválido! Digite 'D' ou 'E'.");
-                continue; // Ignora o restante da iteração se o código for inválido
+                continue; // ignora o restante da iteração se o código for inválido
             }
-
             // Verifica as condições de vitória
             if ((pontosD >= 21 && (pontosD - pontosE) >= 2) || (pontosE >= 21 && (pontosE - pontosD) >= 2)) {
                 break; // Encerra o loop se algum jogador vencer

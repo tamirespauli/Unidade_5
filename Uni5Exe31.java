@@ -16,26 +16,24 @@ public class Uni5Exe31 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-        // Leitura do número a ser decomposto
         System.out.print("Digite um número inteiro positivo: ");
         int numero = teclado.nextInt();
 
-        // Exibe o cabeçalho da decomposição
         System.out.println("Número\tDecomposição");
 
-        // Variável para o divisor inicial (começando pelo menor número primo, que é 2)
+        // variável para o divisor inicial (começando pelo menor número primo 2)
         int divisor = 2;
 
         // Loop para decomposição
         while (numero > 1) {
-            // Se o número é divisível pelo divisor atual
+            // verificar see o número é divisível pelo divisor atual
             if (numero % divisor == 0) {
-                // Exibe o número atual e o divisor
+                // exibe o número atual e o divisor
                 System.out.println(numero + "\t" + divisor);
-                // Atualiza o número, dividindo pelo divisor
+                // Atualiza o numero dividindo pelo divisor
                 numero /= divisor;
             } else {
-                // Caso não seja divisível, incrementa o divisor (vai para o próximo número)
+                // caso não seja divisivel incrementa o divisor (vai para o próximo número)
                 divisor++;
             }
         }

@@ -8,55 +8,49 @@
 
  */
 
-
 import java.util.Scanner;
 
 public class Uni5Exe29 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-
-        // Lê o valor solicitado
         System.out.print("Digite o valor a ser sacado: ");
         int valor = teclado.nextInt();
-
-        // Variáveis para armazenar a quantidade de cada cédula
         int cedulas20 = 0;
         int cedulas10 = 0;
         int cedulas5 = 0;
         int cedulas2 = 0;
         int cedulas1 = 0;
 
-        // Determina a quantidade de cédulas de 20
+        // cedulas de 20
         while (valor >= 20) {
             cedulas20++;
             valor -= 20;
         }
 
-        // Determina a quantidade de cédulas de 10
+        // cedulas de 10
         while (valor >= 10) {
             cedulas10++;
             valor -= 10;
         }
 
-        // Determina a quantidade de cédulas de 5
+        // cedulas de 5
         while (valor >= 5) {
             cedulas5++;
             valor -= 5;
         }
 
-        // Determina a quantidade de cédulas de 2
+        // cedulas de 2
         while (valor >= 2) {
             cedulas2++;
             valor -= 2;
         }
 
-        // Determina a quantidade de cédulas de 1
+        // cedulas de 1
         while (valor >= 1) {
             cedulas1++;
             valor -= 1;
         }
 
-        // Exibe o resultado
         System.out.println("Quantidade de cédulas:");
         if (cedulas20 > 0) {
             System.out.println("Cédulas de 20: " + cedulas20);

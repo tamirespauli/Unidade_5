@@ -15,47 +15,44 @@ D	S	T	Q	Q	S	S
 27	28	29	30	31		
  */
 
-
 import java.util.Scanner;
 
 public class Uni5Exe32 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-        // Leitura do dia da semana em que o mês começa (1=Domingo, 2=Segunda,...,7=Sábado)
         System.out.print("Digite o dia da semana do primeiro dia do mês (1=Domingo, 2=Segunda, ..., 7=Sábado): ");
         int primeiroDia = teclado.nextInt();
 
-        // Leitura do número de dias no mês
         System.out.print("Digite o número de dias no mês: ");
         int numeroDias = teclado.nextInt();
 
-        // Impressão do cabeçalho do calendário
+        // /t faz tabela
         System.out.println("D\tS\tT\tQ\tQ\tS\tS");
 
-        // Inicializa a contagem de dias
+        // inicializa a contagem de dias
         int diaAtual = 1;
 
-        // Contador para o dia da semana
+        // contador dia da semana
         int diaDaSemana = primeiroDia;
 
-        // Loop para imprimir os dias do mês
+        // loop para imprimir os dias do mês
         while (diaAtual <= numeroDias) {
             // Imprime o dia atual
             System.out.print(diaAtual + "\t");
 
-            // Incrementa o dia atual
+            // soma o dia atual
             diaAtual++;
 
-            // Verifica se é o final da semana
+            // verifica se é o final da semana
             if (diaDaSemana % 7 == 0) {
-                System.out.println(); // Pula para a próxima linha ao final da semana
+                System.out.println();
             }
 
-            // Incrementa o dia da semana e reseta se passar de 7
+            // soma o dia da semana e reseta se passar de 7
             diaDaSemana++;
             if (diaDaSemana > 7) {
-                diaDaSemana = 1; // Reseta para Domingo
+                diaDaSemana = 1; // reseta para Domingo
             }
         }
 
